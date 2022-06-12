@@ -40,7 +40,6 @@
         "laravel": {
             "providers": [
                 "SquadMS\\Rules\\RulesServiceProvider",
-                "SquadMS\\Rules\\Providers\\EventServiceProvider",
                 "SquadMS\\Rules\\Providers\\FilamentServiceProvider",
                 "SquadMS\\Rules\\Providers\\ModulesServiceProvider",
                 "SquadMS\\Rules\\Providers\\PermissionsServiceProvider",
