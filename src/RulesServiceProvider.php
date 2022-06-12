@@ -28,8 +28,5 @@ class RulesServiceProvider extends ServiceProvider
         
         /* Load Migrations */
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        
-        /* Register Routes */
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 }
