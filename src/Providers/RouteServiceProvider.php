@@ -1,6 +1,6 @@
 <?php
 
-namespace SquadMS\AdminConfig\Providers;
+namespace SquadMS\Rules\Providers;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
