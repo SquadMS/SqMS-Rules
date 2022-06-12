@@ -23,4 +23,9 @@ class RuleArticle extends Model implements Sortable
         'title',
         'content',
     ];
+    
+    public $sortable = [
+        'order_column_name' => 'order',
+        'sort_when_creating' => true,
+    ];
 }
