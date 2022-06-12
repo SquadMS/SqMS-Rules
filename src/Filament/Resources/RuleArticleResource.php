@@ -2,7 +2,7 @@
 
 namespace SquadMS\Rules\Filament\Resources;
 
-use SquadMS\Rules\Filament\Resources\AdminConfigResource\Pages;
+use SquadMS\Rules\Filament\Resources\RuleArticleResource\Pages;
 use SquadMS\Rules\Models\RuleArticle;
 use Filament\Forms;
 use Filament\Resources\Form;
