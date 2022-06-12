@@ -1,6 +1,6 @@
 <?php
 
-namespace SquadMS\AdminConfig\Filament\Resources;
+namespace SquadMS\Rules\Filament\Resources;
 
 use SquadMS\Rules\Filament\Resources\AdminConfigResource\Pages;
 use SquadMS\Rules\Models\RuleArticle;
@@ -10,7 +10,7 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 
-class AdminConfigResource extends Resource
+class RuleArticleResource extends Resource
 {
     protected static ?string $navigationGroup = 'Rules Management';
 
