@@ -9,9 +9,12 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Resources\Concerns\Translatable;
 
 class RuleArticleResource extends Resource
 {
+    use Translatable;
+    
     protected static ?string $navigationGroup = 'Rules Management';
 
     protected static ?string $model = RuleArticle::class;
