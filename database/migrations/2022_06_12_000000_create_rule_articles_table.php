@@ -18,6 +18,8 @@ return new class extends Migration
 
             $table->text('title');
             $table->text('content');
+            
+            $table->unsignedTinyInteger('order');
 
             $table->timestamps();
         });
