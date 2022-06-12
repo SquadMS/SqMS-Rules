@@ -18,7 +18,8 @@
         "illuminate/events": "^8.0",
         "illuminate/queue": "^8.0",
         "illuminate/cache": "^8.0",
-        "nesbot/carbon": "^2.0",
+        "nesbot/carbon": "^2.0",,
+        "spatie/laravel-translatable": "^5.0",
         "squadms/foundation": "dev-master"
     },
     "require-dev": {
