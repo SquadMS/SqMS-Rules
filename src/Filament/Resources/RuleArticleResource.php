@@ -51,9 +51,9 @@ class RuleArticleResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListRuleArtciles::route('/'),
-            'create' => Pages\CreateRuleArtciles::route('/create'),
-            'edit' => Pages\EditRuleArtciles::route('/{record}/edit'),
+            'index' => Pages\ListRuleArticles::route('/'),
+            'create' => Pages\CreateRuleArticles::route('/create'),
+            'edit' => Pages\EditRuleArticles::route('/{record}/edit'),
         ];
     }
 }
