@@ -1,6 +1,6 @@
 <?php
 
-namespace SquadMS\AdminConfig;
+namespace SquadMS\Rules;
 
 use Illuminate\Console\Scheduling\Schedule;
 use SquadMS\Foundation\Modularity\Contracts\SquadMSModule as SquadMSModuleContract;
