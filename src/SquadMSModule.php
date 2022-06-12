@@ -16,4 +16,11 @@ class SquadMSModule extends SquadMSModuleContract
     {
         return 'SquadMS Rules';
     }
+    
+    public static function overrideConfigs(): array
+    {
+        return [
+            'filament-spatie-laravel-translatable-plugin.default_locales' => Config::get('sqms.locales'),
+        ];
+    }
 }
