@@ -1,6 +1,6 @@
 <?php
 
-namespace SquadMS\AdminConfig\Filament\Resources\RuleArticleResource\Pages;
+namespace SquadMS\Rules\Filament\Resources\RuleArticleResource\Pages;
 
 use SquadMS\Rules\Filament\Resources\RuleArticleResource;
 use Filament\Resources\Pages\CreateRecord;
