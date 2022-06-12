@@ -25,7 +25,7 @@ class AdminConfigResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->rules('required|string|min:1|max:255')
                     ->required(),
-                Forms\Components\TextInput::make('content')
+                Forms\Components\MarkdownEditor::make('content')
                     ->nullable(),
             ]);
     }
