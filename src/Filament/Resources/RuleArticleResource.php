@@ -42,6 +42,18 @@ class RuleArticleResource extends Resource
             ])
             ->filters([
                 //
+            ])
+            ->prependActions([
+                Tables\Actions\Action::make('order_up')
+                    ->iconButton()
+                    ->action(fn (RuleArticle $record) => $record->moveOrderUp())
+                    ->requiresConfirmation()
+                    ->icon('heroicon-o-arrow-up'),
+                Tables\Actions\Action::make('order_down')
+                    ->iconButton()
+                    ->action(fn (RuleArticle $record) => $record->moveOrderDown())
+                    ->requiresConfirmation()
+                    ->icon('heroicon-o-arrow-down')
             ]);
     }
     
