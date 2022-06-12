@@ -17,6 +17,7 @@ class RuleArticle extends Model implements Sortable
     protected $fillable = [
         'title',
         'content',
+        'order'
     ];
     
     public $translatable = [
