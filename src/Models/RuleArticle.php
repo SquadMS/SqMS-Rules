@@ -16,4 +16,9 @@ class RuleArticle extends Model
         'title',
         'content',
     ];
+    
+    public $translatable = [
+        'title',
+        'content',
+    ];
 }
