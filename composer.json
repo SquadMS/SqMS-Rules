@@ -20,6 +20,7 @@
         "illuminate/cache": "^8.0",
         "nesbot/carbon": "^2.0",
         "filament/spatie-laravel-translatable-plugin": "^2.0",
+        "spatie/eloquent-sortable": "^4.0",
         "squadms/foundation": "dev-master"
     },
     "require-dev": {
