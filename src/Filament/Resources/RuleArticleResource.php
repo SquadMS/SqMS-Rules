@@ -37,6 +37,7 @@ class RuleArticleResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('order')->sortable(),
                 Tables\Columns\TextColumn::make('title')->sortable(),
             ])
             ->filters([
