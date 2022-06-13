@@ -4,12 +4,12 @@ namespace SquadMS\Rules\Filament\Resources;
 
 use SquadMS\Rules\Filament\Resources\RuleArticleResource\Pages;
 use SquadMS\Rules\Models\RuleArticle;
+use SquadMS\Foundation\Resources\Concerns\Translatable;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Resources\Concerns\Translatable;
 
 class RuleArticleResource extends Resource
 {
