@@ -3,17 +3,23 @@
 namespace SquadMS\Rules;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
+use SquadMS\Foundation\Contracts\SquadMSModuleServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use SquadMS\Foundation\Facades\SquadMSPermissions;
+use SquadMS\Rules\Filament\Resources\RuleArticleResource;
 
-class RulesServiceProvider extends ServiceProvider
+class RulesServiceProvider extends SquadMSModuleServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
+    public static string $name = 'sqms-rules';
+
+    protected array $resources = [
+        RuleArticleResource::class,
+    ];
+
+    public function configureModule(Package $package): void
     {
-        //
+        $package->hasRoutes(['api', 'web']);
     }
 
     /**
@@ -21,12 +27,11 @@ class RulesServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function bootedModule(): void
     {
-        /* Configuration */
-        $this->mergeConfigFrom(__DIR__.'/../config/sqms-rules.php', 'sqms-rules');
-        
-        /* Load Migrations */
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        /* Permissions */
+        foreach (Config::get('sqms-rules.permissions.definitions', []) as $definition => $displayName) {
+            SquadMSPermissions::define(Config::get('sqms-rules.permissions.module'), $definition, $displayName);
+        }
     }
 }

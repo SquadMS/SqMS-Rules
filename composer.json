@@ -38,12 +38,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SquadMS\\Rules\\RulesServiceProvider",
-                "SquadMS\\Rules\\Providers\\FilamentServiceProvider",
-                "SquadMS\\Rules\\Providers\\ModulesServiceProvider",
-                "SquadMS\\Rules\\Providers\\PermissionsServiceProvider",
-                "SquadMS\\Rules\\Providers\\RouteServiceProvider"
+                "SquadMS\\Rules\\RulesServiceProvider"
             ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "0.0.0/composer-include-files": true
         }
     }
 }
