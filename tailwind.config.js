@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    prefix: 'sqmsr-',
     content: [
         './resources/views/**/*.blade.php',
     ],
