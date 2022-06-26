@@ -8,7 +8,7 @@
     @forelse($rules as $rule)
         <div>
             <div>{{ $rule->order }} {{ $rule->title }}</div>
-            <div>{{ $rule->content }}</div>
+            <div>@markdown($rule->content)</div>
         </div>
     @empty
         <p>@lang('sqms-rules::pages/rules.empty')</p>

@@ -18,7 +18,8 @@
         "nesbot/carbon": "^2.0",
         "filament/spatie-laravel-translatable-plugin": "^2.0",
         "spatie/eloquent-sortable": "^4.0",
-        "squadms/foundation": "dev-master"
+        "squadms/foundation": "dev-master",
+        "graham-campbell/markdown": "^14.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.0",
