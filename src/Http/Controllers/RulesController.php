@@ -15,6 +15,6 @@ class RulesController extends Controller
     public function show()
     {
         /* Show home page */
-        return view(Config::get('sqms.theme').'::pages.rules');
+        return view('sqms-rules::rules');
     }
 }

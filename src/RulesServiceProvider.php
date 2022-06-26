@@ -19,7 +19,8 @@ class RulesServiceProvider extends SquadMSModuleServiceProvider
 
     public function configureModule(Package $package): void
     {
-        $package->hasRoutes(['api', 'web']);
+        $package->hasAssets()
+            ->hasRoutes(['api', 'web']);
     }
 
     /**
