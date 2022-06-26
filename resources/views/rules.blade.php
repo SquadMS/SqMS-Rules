@@ -8,12 +8,12 @@
     @if(count($rules))
         <div class="space-y-2">
             @foreach($rules as $rule)
-                <div class="bg-slate-700 p-2">
-                    <h2>
-                        <span class="mr-2">§{{ $rule->order }}<span> 
+                <div class="bg-gray-300 border border-gray-100">
+                    <h2 class="bg-gray-500 p-2 text-white">
+                        <span class="mr-2 text-amber-400">§{{ $rule->order }}</span> 
                         {{ $rule->title }}
                     </h2>
-                    <div class="prose">@markdown($rule->content)</div>
+                    <div class="prose p-2">@markdown($rule->content)</div>
                 </div>
             @endforeach
         </div>
