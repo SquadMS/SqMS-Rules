@@ -11,6 +11,6 @@
             <div>{{ $rule->content }}</div>
         </div>
     @empty
-        <p>@lang('sqms-riles::pages/rules.empty')</p>
+        <p>@lang('sqms-rules::pages/rules.empty')</p>
     @endforelse
 @endsection
