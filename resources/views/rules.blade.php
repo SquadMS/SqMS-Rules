@@ -17,3 +17,7 @@
         <p>@lang('sqms-rules::pages/rules.empty')</p>
     @endforelse
 @endsection
+
+@push('styles')
+<link href="{{ mix('css/sqms-rules.css', 'themes/sqms-rules') }}" rel="stylesheet">
+@endpush
