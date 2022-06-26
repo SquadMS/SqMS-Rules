@@ -5,17 +5,21 @@
 @endsection
 
 @section('page-content')
-    @forelse($rules as $rule)
-        <div>
-            <h2>
-                <span class="mr-2">§{{ $rule->order }}<span> 
-                {{ $rule->title }}
-            </h2>
-            <div class="prose">@markdown($rule->content)</div>
+    @if(count($rules))
+        <div class="space-y-1">
+            @foreach($rules as $rule)
+                <div class="">
+                    <h2>
+                        <span class="mr-2">§{{ $rule->order }}<span> 
+                        {{ $rule->title }}
+                    </h2>
+                    <div class="prose">@markdown($rule->content)</div>
+                </div>
+            @endforeach
         </div>
-    @empty
+    @else
         <p>@lang('sqms-rules::pages/rules.empty')</p>
-    @endforelse
+    @endif
 @endsection
 
 @push('styles')
