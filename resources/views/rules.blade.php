@@ -19,5 +19,5 @@
 @endsection
 
 @push('styles')
-<link href="{{ mix('css/sqms-rules.css', 'themes/sqms-rules') }}" rel="stylesheet">
+<link href="{{ mix('css/sqms-rules.css', 'vendor/sqms-rules') }}" rel="stylesheet">
 @endpush
