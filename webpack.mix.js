@@ -12,7 +12,7 @@ if (fs.existsSync('resources/dist')) {
 /* Configure the resources/dist path */
 mix.setPublicPath('resources/dist');
 
-mix.setResourceRoot('/themes/sqms-rules');
+mix.setResourceRoot('/vendor/sqms-rules');
 
 /* Build SCSS/JS assets */
 mix
