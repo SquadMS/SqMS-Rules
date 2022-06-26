@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Config;
 use SquadMS\Foundation\Contracts\SquadMSModuleServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 use SquadMS\Foundation\Facades\SquadMSPermissions;
+use SquadMS\Foundation\Facades\SquadMSNavigation;
 use SquadMS\Rules\Filament\Resources\RuleArticleResource;
 
 class RulesServiceProvider extends SquadMSModuleServiceProvider
@@ -34,5 +35,10 @@ class RulesServiceProvider extends SquadMSModuleServiceProvider
         foreach (Config::get('sqms-rules.permissions.definitions', []) as $definition => $displayName) {
             SquadMSPermissions::define(Config::get('sqms-rules.permissions.module'), $definition, $displayName);
         }
+    }
+
+    public function addNavigationTypes(): void
+    {
+        SquadMSNavigation::addType('Rules', fn () => route('rules'));  
     }
 }

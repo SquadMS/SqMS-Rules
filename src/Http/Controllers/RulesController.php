@@ -4,6 +4,7 @@ namespace SquadMS\Rules\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Config;
+use SquadMS\Rules\Models\RuleArticle;
 
 class RulesController extends Controller
 {
@@ -15,6 +16,8 @@ class RulesController extends Controller
     public function show()
     {
         /* Show home page */
-        return view('sqms-rules::rules');
+        return view('sqms-rules::rules', [
+            'rules' => RuleArticle::ordered()->get()
+        ]);
     }
 }
