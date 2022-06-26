@@ -5,10 +5,12 @@
 @endsection
 
 @section('page-content')
-    @foreach($rules as $rule)
+    @forelse($rules as $rule)
         <div>
             <div>{{ $rule->order }} {{ $rule->title }}</div>
             <div>{{ $rule->content }}</div>
         </div>
-    @endforeach
+    @empty
+        <p>@lang('sqms-riles::pages/rules.empty')</p>
+    @endforelse
 @endsection

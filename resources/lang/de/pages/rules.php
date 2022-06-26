@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'heading' => 'Regeln'
+    'heading' => 'Regeln',
+
+    'empty' => 'Es wurden noch keine Regeln angelegt.'
 ];
