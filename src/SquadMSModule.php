@@ -2,7 +2,7 @@
 
 namespace SquadMS\Rules;
 
-use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Artisan;
 use SquadMS\Foundation\Modularity\Contracts\SquadMSModule as SquadMSModuleContract;
 
 class SquadMSModule extends SquadMSModuleContract
@@ -15,5 +15,14 @@ class SquadMSModule extends SquadMSModuleContract
     public static function getName(): string
     {
         return 'SquadMS Rules';
+    }
+
+    public static function publishAssets(): void
+    {
+        Artisan::call('vendor:publish', [
+            '--provider' => RulesServiceProvider::class,
+            '--tag'      => 'assets',
+            '--force'    => true,
+        ]);
     }
 }
