@@ -6,9 +6,9 @@
 
 @section('page-content')
     @if(count($rules))
-        <div class="space-y-1">
+        <div class="space-y-2">
             @foreach($rules as $rule)
-                <div class="">
+                <div class="bg-slate-700 p-2">
                     <h2>
                         <span class="mr-2">§{{ $rule->order }}<span> 
                         {{ $rule->title }}
