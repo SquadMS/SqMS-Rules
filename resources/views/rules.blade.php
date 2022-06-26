@@ -7,8 +7,11 @@
 @section('page-content')
     @forelse($rules as $rule)
         <div>
-            <div>{{ $rule->order }} {{ $rule->title }}</div>
-            <div>@markdown($rule->content)</div>
+            <h2>
+                <span class="mr-2">§{{ $rule->order }}<span> 
+                {{ $rule->title }}
+            </h2>
+            <div class="prose">@markdown($rule->content)</div>
         </div>
     @empty
         <p>@lang('sqms-rules::pages/rules.empty')</p>
