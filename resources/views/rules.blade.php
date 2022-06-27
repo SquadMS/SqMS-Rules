@@ -1,10 +1,4 @@
-@extends('sqms-foundation::templates.page')
-
-@section('title')
-    {{ __('sqms-rules::pages/rules.heading') }}
-@endsection
-
-@section('page-content')
+<x-sqms-foundation::templates.page :title="__('sqms-rules::pages/rules.heading')">
     @if(count($rules))
         <div class="sqmsr-space-y-2">
             @foreach($rules as $rule)
@@ -20,8 +14,8 @@
     @else
         <p>@lang('sqms-rules::pages/rules.empty')</p>
     @endif
-@endsection
 
-@push('styles')
-<link href="{{ mix('css/sqms-rules.css', 'vendor/sqms-rules') }}" rel="stylesheet">
-@endpush
+    @push('styles')
+    <link href="{{ mix('css/sqms-rules.css', 'vendor/sqms-rules') }}" rel="stylesheet">
+    @endpush
+</x-sqms-foundation::templates.page>
