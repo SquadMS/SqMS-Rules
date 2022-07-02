@@ -3,5 +3,5 @@
 return [
     'heading' => 'Rules',
 
-    'empty' => 'No rules have been defined yet.'
+    'empty' => 'No rules have been defined yet.',
 ];

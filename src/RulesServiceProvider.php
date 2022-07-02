@@ -2,12 +2,11 @@
 
 namespace SquadMS\Rules;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
-use SquadMS\Foundation\Contracts\SquadMSModuleServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use SquadMS\Foundation\Facades\SquadMSPermissions;
+use SquadMS\Foundation\Contracts\SquadMSModuleServiceProvider;
 use SquadMS\Foundation\Facades\SquadMSNavigation;
+use SquadMS\Foundation\Facades\SquadMSPermissions;
 use SquadMS\Rules\Filament\Resources\RuleArticleResource;
 
 class RulesServiceProvider extends SquadMSModuleServiceProvider
@@ -39,6 +38,6 @@ class RulesServiceProvider extends SquadMSModuleServiceProvider
 
     public function addNavigationTypes(): void
     {
-        SquadMSNavigation::addType('Rules', fn () => route('rules'));  
+        SquadMSNavigation::addType('Rules', fn () => route('rules'));
     }
 }

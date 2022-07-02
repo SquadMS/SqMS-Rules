@@ -3,9 +3,9 @@
 namespace SquadMS\Rules\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\HasTranslations;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Spatie\Translatable\HasTranslations;
 
 class RuleArticle extends Model implements Sortable
 {
@@ -17,14 +17,14 @@ class RuleArticle extends Model implements Sortable
     protected $fillable = [
         'title',
         'content',
-        'order'
+        'order',
     ];
-    
+
     public $translatable = [
         'title',
         'content',
     ];
-    
+
     public $sortable = [
         'order_column_name' => 'order',
         'sort_when_creating' => true,

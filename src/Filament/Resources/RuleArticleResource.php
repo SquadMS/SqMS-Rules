@@ -2,19 +2,19 @@
 
 namespace SquadMS\Rules\Filament\Resources;
 
-use SquadMS\Rules\Filament\Resources\RuleArticleResource\Pages;
-use SquadMS\Rules\Models\RuleArticle;
-use SquadMS\Foundation\Filament\Resources\Concerns\Translatable;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use SquadMS\Foundation\Filament\Resources\Concerns\Translatable;
+use SquadMS\Rules\Filament\Resources\RuleArticleResource\Pages;
+use SquadMS\Rules\Models\RuleArticle;
 
 class RuleArticleResource extends Resource
 {
     use Translatable;
-    
+
     protected static ?string $navigationGroup = 'Rules Management';
 
     protected static ?string $model = RuleArticle::class;
@@ -53,17 +53,17 @@ class RuleArticleResource extends Resource
                     ->iconButton()
                     ->action(fn (RuleArticle $record) => $record->moveOrderDown())
                     ->requiresConfirmation()
-                    ->icon('heroicon-o-arrow-down')
+                    ->icon('heroicon-o-arrow-down'),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [

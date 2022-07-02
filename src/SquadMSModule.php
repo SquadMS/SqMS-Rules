@@ -20,7 +20,7 @@ class SquadMSModule extends SquadMSModuleContract
     public static function publishAssets(): void
     {
         Artisan::call('vendor:publish', [
-            '--tag'      => self::getIdentifier() . '-assets',
+            '--tag'      => self::getIdentifier().'-assets',
             '--force'    => true,
         ]);
     }

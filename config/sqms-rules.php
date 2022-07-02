@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'routes' => [
+    'routes' => [
         'prefix'     => null,
         'middleware' => ['web'],
         'def'        => [
@@ -21,5 +21,5 @@ return [
         'definitions' => [
             'admin rules' => 'Grant access to the Rules management',
         ],
-    ]
+    ],
 ];
